@@ -1,28 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <h1>Мое приложение</h1>
+    </header>
+    <main>
+      <ClientForm />
+    </main>
+    <footer>
+      <p>&copy; 2024 Мое приложение</p>
+    </footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ClientForm from './components/ClientForm.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    ClientForm
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 10px 0;
 }
 </style>
+
